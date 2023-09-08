@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export default function Header() {
@@ -6,9 +7,15 @@ export default function Header() {
       <div className="navbar">
         <div className="Logo">logo</div>
         <nav>
-          <p>Links</p>
-          <p>Links</p>
-          <p>Links</p>
+          <Link to="/">
+            <p>Home</p>
+          </Link>
+          <Link to="/">
+            <p>Services</p>
+          </Link>
+          <Link to="/">
+            <p>Price</p>
+          </Link>
         </nav>
       </div>
       <div className="banner">banner</div>
@@ -18,7 +25,6 @@ export default function Header() {
 
 const HeaderStyled = styled.div`
   .navbar {
-    background-color: red;
     height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -30,11 +36,17 @@ const HeaderStyled = styled.div`
     }
 
     nav {
-      background-color: purple;
       display: flex;
 
       p {
-        padding: 5px;
+        text-decoration: none;
+        margin: 5px;
+        color: Black;
+
+        &:hover {
+            cursor: pointer;
+            color: white;
+        }
       }
     }
   }
