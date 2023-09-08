@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import Button from "../reusable-ui/PrimaryButton";
 
 export default function Banner() {
   return (
@@ -6,9 +7,9 @@ export default function Banner() {
       <h1>Complete it services</h1>
       <h3>for Residential, Small & Medium Businesses</h3>
 
-      <div className="cta">
-        <button>Learn more</button>
-        <button>Contact</button>
+      <div>
+        <Button label="Learn more"/>
+        <Button label="Contact" />
       </div>
     </BannerStyled>
   );
@@ -35,26 +36,5 @@ const BannerStyled = styled.div`
     }
     h3 {
       font-size: 20px;
-    }
-
-    .cta {
-
-      button {
-        width: 140px;
-        height: 50px;
-        color: #1bbabf;
-        background-color: white;
-        border: 1px solid white;
-        border-radius: 40px;
-        margin: 10px;
-        font-family: 'Hind', sans-serif;
-
-        &:hover {
-          cursor: pointer;
-          color: white;
-          background-color: #1bbabf;
-          transition: all 0.5s ease-in-out;
-        }
-      }
     }
   `;
