@@ -25,6 +25,10 @@ const LinksStyled = styled.nav`
     position: relative;
     text-decoration: none;
     margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
 
     &::before {
       content: "";
