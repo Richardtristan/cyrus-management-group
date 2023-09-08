@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import Logo from "../../assets/images/CMG-Horizontal-Logo-RGB-Full-Color.png";
 
 export default function Header() {
   return (
     <HeaderStyled>
       <div className="navbar">
-        <div className="Logo">logo</div>
+
+            <img className="Logo" src={Logo} alt="" />
+
         <nav>
           <Link className="link" to="/">
             Home
@@ -32,7 +35,7 @@ const HeaderStyled = styled.div`
     padding: 10px;
 
     .Logo {
-      background-color: Pink;
+      height: 50px;
     }
 
     nav {
