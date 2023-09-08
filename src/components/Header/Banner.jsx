@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
-import Button from "../reusable-ui/PrimaryButton";
+import PrimaryButton from "../reusable-ui/PrimaryButton";
+import SecondaryButton from "../reusable-ui/SecondaryButton";
 
 export default function Banner() {
   return (
@@ -8,8 +9,8 @@ export default function Banner() {
       <h3>for Residential, Small & Medium Businesses</h3>
 
       <div>
-        <Button label="Learn more"/>
-        <Button label="Contact" />
+        <PrimaryButton label="Learn more"/>
+        <SecondaryButton label="Contact" />
       </div>
     </BannerStyled>
   );
