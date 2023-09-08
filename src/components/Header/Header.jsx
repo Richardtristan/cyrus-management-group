@@ -38,4 +38,12 @@ const HeaderStyled = styled.div`
       }
     }
   }
+  .banner {
+    background-color: blue;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
