@@ -74,6 +74,7 @@ export default function Services() {
 }
 
 const ServicesStyled = styled.div`
+position: relative;
     h2 {
       text-align: center;
       text-transform: uppercase;
@@ -92,7 +93,7 @@ const ServicesStyled = styled.div`
       height: 100%;
       position: absolute;
       top: 72px;
-      left: 49vw;
+      left: 15vw;
       border-radius: 10px;
       background: #1ca6b5;
     }
