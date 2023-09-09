@@ -15,7 +15,6 @@ const SecondaryButtonStyled = styled.button`
   background-color: #1bbabf;
   border: 2px solid white;
   border-radius: 40px;
-  margin: 10px;
   font-family: "Hind", sans-serif;
 
   &:hover {

@@ -15,7 +15,6 @@ const PrimaryButtonStyled = styled.button`
   background-color: white;
   border: 2px solid #1bbabf;
   border-radius: 40px;
-  margin: 10px;
   font-family: "Hind", sans-serif;
 
   &:hover {
