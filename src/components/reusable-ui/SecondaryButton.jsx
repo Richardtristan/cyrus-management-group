@@ -21,6 +21,7 @@ const SecondaryButtonStyled = styled.button`
     cursor: pointer;
     color: #1bbabf;
     background-color: white;
+    border: 2px solid #1bbabf;
     transition: all 0.5s ease-in-out;
   }
 `;
