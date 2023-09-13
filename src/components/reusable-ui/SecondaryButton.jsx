@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 
-export default function SecondaryButton({ label }) {
+export default function SecondaryButton({ className, label }) {
   return (
-    <SecondaryButtonStyled>
+    <SecondaryButtonStyled className={className}>
       <span>{label}</span>
     </SecondaryButtonStyled>
   );
