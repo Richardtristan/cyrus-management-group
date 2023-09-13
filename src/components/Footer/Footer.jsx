@@ -1,15 +1,12 @@
 import { styled } from "styled-components";
 import brandmark from "../../assets/images/Brandmark_Cyrus--WIP.png";
+import Links from "../reusable-ui/Links";
 
 export default function Footer() {
   return (
     <FotterStyled>
       <div>
-        <div className="link">
-          <a href="">Link</a>
-          <a href="">Link</a>
-          <a href="">Link</a>
-        </div>
+        <Links className={"link-footer"} />
         <div className="centriste">
           <img src={brandmark} alt="BrandMark Cyrus Management Group" />
           <div>
@@ -34,18 +31,17 @@ export default function Footer() {
 }
 
 const FotterStyled = styled.footer`
-    background-color: antiquewhite;
-    margin-top: 160px;
+  background-color: antiquewhite;
+  margin-top: 160px;
   div {
     display: flex;
     justify-content: space-between;
 
-    .link {
-      background-color: yellow;
-      display: flex;
+    .link-footer {
       flex-direction: column;
       padding: 40px;
     }
+
     .centriste {
       background-color: aqua;
       padding-top: 5px;
@@ -61,8 +57,8 @@ const FotterStyled = styled.footer`
       }
       div {
         display: flex;
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
       }
     }
     .reseaux {
