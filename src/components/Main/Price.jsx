@@ -16,6 +16,7 @@ export default function Price() {
 }
 
 const PriceStyled = styled.div`
+margin-top: 120px;
   h2 {
     text-align: center;
     text-transform: uppercase;
