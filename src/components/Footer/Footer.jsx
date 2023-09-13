@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 import brandmark from "../../assets/images/Brandmark_Cyrus--WIP.png";
 import Links from "../reusable-ui/Links";
-import { BsTwitter, BsSkype } from "react-icons/bs";
+import { BsTwitter, BsSkype, BsTelephoneOutboundFill } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiOutlineMail } from "react-icons/ai";
 
 export default function Footer() {
   return (
@@ -12,9 +12,15 @@ export default function Footer() {
         <Links className={"link-footer"} />
         <div className="centriste">
           <img src={brandmark} alt="BrandMark Cyrus Management Group" />
-          <div>
-            <p>Tel : 0000/00.00.00</p>
-            <p>Mail : contact@cyrus.com</p>
+          <div className="contact">
+            <div className="phone">
+              <BsTelephoneOutboundFill className="icon" />
+              <p> (407) 590-3830</p>
+            </div>
+            <div className="mail">
+              <AiOutlineMail className="icon" />
+              <p>contact@cyrusmanagementgroup.com</p>
+            </div>
           </div>
         </div>
         <div className="networks">
@@ -45,7 +51,6 @@ const FotterStyled = styled.footer`
     }
 
     .centriste {
-      background-color: aqua;
       padding-top: 5px;
       flex: 1;
       display: flex;
@@ -57,10 +62,28 @@ const FotterStyled = styled.footer`
         width: 150px;
         margin-bottom: 35px;
       }
-      div {
+      .contact {
         display: flex;
         flex-direction: column;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+          color: white;
+          margin-right: 8px;
+        }
+        p {
+          color: white;
+        }
+        .phone:hover,
+        .mail:hover {
+          .icon,
+          p {
+            cursor: pointer;
+            transform: translateY(-2px);
+            text-shadow: 2px 2px 2px #D3D3D3;
+          }
+        }
       }
     }
     .networks {
