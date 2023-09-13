@@ -1,6 +1,6 @@
 import Logo from "../../assets/images/CMG-Horizontal-Logo-RGB-Full-Color.png";
 import { styled } from "styled-components";
-import Links from "./Links";
+import Links from "../reusable-ui/Links";
 
 export default function Navbar() {
   return (
