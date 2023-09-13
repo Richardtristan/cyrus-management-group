@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 import brandmark from "../../assets/images/CMG-Brandmark-RGB-White.png";
 import Links from "../reusable-ui/Links";
-import { BsTwitter, BsSkype, BsTelephoneOutboundFill } from "react-icons/bs";
+import { BsTwitter, BsSkype } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { AiFillInstagram, AiOutlineMail } from "react-icons/ai";
+import { AiFillInstagram } from "react-icons/ai";
 
 export default function Footer() {
   return (
@@ -13,14 +13,12 @@ export default function Footer() {
         <div className="centriste">
           <img src={brandmark} alt="BrandMark Cyrus Management Group" />
           <div className="contact">
-            <div className="phone">
-              <BsTelephoneOutboundFill className="icon" />
-              <p> (407) 590-3830</p>
-            </div>
-            <div className="mail">
-              <AiOutlineMail className="icon" />
-              <p>contact@cyrusmanagementgroup.com</p>
-            </div>
+            <a href="tel:(407) 590-3830" className="phone">
+              (407) 590-3830
+            </a>
+            <a href="mailto:contact@cyrusmanagementgroup.com" className="mail">
+              contact@cyrusmanagementgroup.com
+            </a>
           </div>
         </div>
         <div className="networks">
@@ -68,20 +66,43 @@ const FotterStyled = styled.footer`
         justify-content: center;
         align-items: center;
 
-        .icon {
+        a {
           color: white;
-          margin-right: 8px;
-        }
-        p {
-          color: white;
-        }
-        .phone:hover,
-        .mail:hover {
-          .icon,
-          p {
-            cursor: pointer;
-            transform: translateY(-2px);
-            text-shadow: 2px 2px 2px #D3D3D3;
+          text-decoration: none;
+          display: inline-block;
+          font-weight: lighter;
+          padding: 0.5em;
+          margin-left: -0.5em;
+          position: relative;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+          &:before,
+          &:after {
+            position: absolute;
+            content: "";
+            border-bottom: 3px solid white;
+            border-radius: 1em;
+            bottom: 0.3em;
+            transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+          }
+
+          &:before {
+            width: 1em;
+            transform-origin: left;
+          }
+
+          &:after {
+            width: 82%;
+            left: 1em;
+            transform: translateX(110%);
+          }
+
+          &:hover:before {
+            transform: scaleX(0.3);
+          }
+
+          &:hover:after {
+            transform: translateX(0);
           }
         }
       }
