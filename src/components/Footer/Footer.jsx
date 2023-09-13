@@ -88,5 +88,9 @@ const FotterStyled = styled.footer`
   }
   .copyright {
     text-align: right;
+    color: #fff;
+    font-family: "Hind";
+    font-size: 12px;
+    font-weight: 300;
   }
 `;
