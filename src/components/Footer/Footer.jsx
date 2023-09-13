@@ -1,6 +1,9 @@
 import { styled } from "styled-components";
 import brandmark from "../../assets/images/Brandmark_Cyrus--WIP.png";
 import Links from "../reusable-ui/Links";
+import { BsTwitter, BsSkype } from "react-icons/bs";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 export default function Footer() {
   return (
@@ -14,13 +17,12 @@ export default function Footer() {
             <p>Mail : contact@cyrus.com</p>
           </div>
         </div>
-        <div className="reseaux">
-          <p>F</p>
-          <p>Y</p>
-          <p>G</p>
-          <p>T</p>
-          <p>X</p>
-          <p>L</p>
+        <div className="networks">
+          <BsTwitter className="icon" />
+          <FaFacebookF className="icon" />
+          <AiFillInstagram className="icon" />
+          <BsSkype className="icon" />
+          <FaLinkedinIn className="icon" />
         </div>
       </div>
       <p className="copyright">
@@ -31,7 +33,7 @@ export default function Footer() {
 }
 
 const FotterStyled = styled.footer`
-  background-color: antiquewhite;
+  background-color: #1babbf;
   margin-top: 160px;
   div {
     display: flex;
@@ -61,11 +63,27 @@ const FotterStyled = styled.footer`
         text-align: center;
       }
     }
-    .reseaux {
-      background-color: green;
+    .networks {
       padding: 40px;
       display: flex;
       flex-direction: column;
+
+      .icon {
+        color: white;
+        padding: 5px;
+        margin: 3px;
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: white;
+          color: #1babbf;
+          border-radius: 50%;
+          transform: translateY(-3px);
+          transition: 0.3s ease-in-out;
+        }
+      }
     }
   }
   .copyright {
