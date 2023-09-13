@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import brandmark from "../../assets/images/Brandmark_Cyrus--WIP.png";
+import brandmark from "../../assets/images/CMG-Brandmark-RGB-White.png";
 import Links from "../reusable-ui/Links";
 import { BsTwitter, BsSkype, BsTelephoneOutboundFill } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
@@ -51,7 +51,7 @@ const FotterStyled = styled.footer`
     }
 
     .centriste {
-      padding-top: 5px;
+      padding-top: 20px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -59,8 +59,8 @@ const FotterStyled = styled.footer`
       justify-content: space-around;
 
       img {
-        width: 150px;
-        margin-bottom: 35px;
+        width: 120px;
+        margin-bottom: 25px;
       }
       .contact {
         display: flex;
