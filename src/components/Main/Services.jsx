@@ -74,34 +74,31 @@ export default function Services() {
 }
 
 const ServicesStyled = styled.div`
-position: relative;
-    h2 {
-      text-align: center;
-      text-transform: uppercase;
-      color: #000;
-      text-align: center;
-      font-family: "Montserrat", sans-serif;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: normal;
-      margin: 30px 0;
-    }
+  position: relative;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 30px 0;
+  }
 
-    .separator {
-      width: 25px;
-      height: 100%;
-      position: absolute;
-      top: 72px;
-      left: 15vw;
-      border-radius: 10px;
-      background: #1ca6b5;
-    }
-    .service-left {
-      left: 25vw;
-    }
-    .service-right {
-      right: 25vw;
-      text-align: right;
-    }
+  .separator {
+    width: 25px;
+    height: 100%;
+    border-radius: 10px;
+    background: #1ca6b5;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .service-left {
+    left: 25vw;
+  }
+  .service-right {
+    right: 25vw;
+    text-align: right;
+  }
 `;
