@@ -8,7 +8,7 @@ import Faq from "./Faq";
 export default function Main() {
   return (
     <MainStyled>
-      <Gradient className={"gradient-top"}/>
+      <Gradient className={"gradient-top"} />
       <Services />
       <Cta />
       <Price />
@@ -28,7 +28,7 @@ const MainStyled = styled.div`
 
   .gradient-top {
     top: 0;
-  left: 0;
+    left: 0;
   }
   .gradient-bottom {
     transform: rotate(180deg);
