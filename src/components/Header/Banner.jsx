@@ -1,12 +1,13 @@
 import { styled } from "styled-components";
 import PrimaryButton from "../reusable-ui/PrimaryButton";
 import SecondaryButton from "../reusable-ui/SecondaryButton";
+import 'animate.css';
 
 export default function Banner() {
   return (
     <BannerStyled>
-      <h1>Complete it services</h1>
-      <h3>for Residential, Small & Medium Businesses</h3>
+      <h1 className="fadeInDown">Complete it services</h1>
+      <h3 className="fadeInUp">for Residential, Small & Medium Businesses</h3>
 
       <div>
         <PrimaryButton label="Learn more" />
@@ -41,5 +42,14 @@ const BannerStyled = styled.div`
   }
   button {
     margin: 50px;
+  }
+
+  .fadeInDown {
+    animation: fadeInDown; 
+  animation-duration: 3s; 
+  }
+  .fadeInUp {
+    animation: fadeInUp; 
+  animation-duration: 3s; 
   }
 `;
