@@ -38,7 +38,6 @@ export default function Footer() {
 
 const FotterStyled = styled.footer`
   background-color: #1babbf;
-  margin-top: 160px;
   div {
     display: flex;
     justify-content: space-between;
