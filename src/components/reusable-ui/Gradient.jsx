@@ -14,7 +14,5 @@ const GradientStyled = styled.div`
     rgba(255, 255, 255, 0) 50%
   );
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: -1;
 `;
