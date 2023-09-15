@@ -5,7 +5,7 @@ import CardPriceHourly from "./CardPriceHourly";
 
 export default function Price() {
   return (
-    <PriceStyled>
+    <PriceStyled id="Price">
       <h2>Price</h2>
       <div className="cards">
         <CardPrice price={140} title={"Montly Basic"} />

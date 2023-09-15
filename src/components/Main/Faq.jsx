@@ -3,7 +3,7 @@ import NestedAccordion from "../reusable-ui/NestedAccordion";
 
 export default function Faq() {
   return (
-    <FaqStyled>
+    <FaqStyled id="Faq">
       <h2>F.A.Q</h2>
       <NestedAccordion title={"Title 1"} text={"Text"} />
       <NestedAccordion title={"Title 2"} text={"Text"} />
