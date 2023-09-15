@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
 import brandmark from "../../assets/images/CMG-Brandmark-RGB-White.png";
-import Links from "../reusable-ui/Links";
 import { BsTwitter, BsSkype } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import FooterLinks from "./FooterLinks";
 
 export default function Footer() {
   return (
     <FotterStyled>
       <div>
-        <Links className={"link-footer"} />
+        <FooterLinks />
         <div className="centriste">
           <img src={brandmark} alt="BrandMark Cyrus Management Group" />
           <div className="contact">
@@ -41,11 +41,6 @@ const FotterStyled = styled.footer`
   div {
     display: flex;
     justify-content: space-between;
-
-    .link-footer {
-      flex-direction: column;
-      padding: 40px;
-    }
 
     .centriste {
       padding-top: 20px;

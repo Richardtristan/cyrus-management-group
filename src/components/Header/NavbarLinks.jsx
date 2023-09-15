@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
-export default function Links({className}) {
+export default function NavbarLinks({ className }) {
   return (
     <LinksStyled className={className}>
-      <Link className="link" to="/">
-        Home
-      </Link>
       <Link className="link" to="/">
         Services
       </Link>
       <Link className="link" to="/">
         Price
+      </Link>
+      <Link className="link" to="/">
+        F.a.q
       </Link>
     </LinksStyled>
   );
@@ -24,8 +24,8 @@ const LinksStyled = styled.nav`
     color: #18272f;
     position: relative;
     text-decoration: none;
-    margin: 5px;
-    font-family: 'Montserrat', sans-serif;
+    margin: 5px 15px;
+    font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
