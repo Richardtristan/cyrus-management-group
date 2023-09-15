@@ -1,12 +1,16 @@
 import Logo from "../../assets/images/CMG-Horizontal-Logo-RGB-Full-Color.png";
 import { styled } from "styled-components";
-import Links from "../reusable-ui/Links";
+import NavbarLinks from "./NavbarLinks";
+import PrimaryButton from "../reusable-ui/PrimaryButton";
 
 export default function Navbar() {
   return (
     <NavbarStyled className="navbar">
       <img className="Logo" src={Logo} alt="" />
-      <Links />
+      <div>
+        <NavbarLinks />
+        <PrimaryButton label={"Contact"} />
+      </div>
     </NavbarStyled>
   );
 }
@@ -20,5 +24,13 @@ const NavbarStyled = styled.div`
 
   .Logo {
     height: 50px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    button {
+      margin-left: 10px;
+    }
   }
 `;
