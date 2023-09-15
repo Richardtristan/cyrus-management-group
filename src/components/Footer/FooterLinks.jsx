@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import { styled } from "styled-components";
 
 export default function FooterLinks({ className }) {
   return (
     <LinksStyled className={className}>
-      <Link className="link" to="/">
+      <Link className="link" to="/Main/Services#Services">
         Services
       </Link>
-      <Link className="link" to="/">
+      <Link className="link" to="/Main/Price#Price">
         Price
       </Link>
-      <Link className="link" to="/">
+      <Link className="link" to="/Main/Faq#Faq">
         F.a.q
       </Link>
     </LinksStyled>
