@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+
 import CardPrice from "../reusable-ui/CardPrice";
 import CardPriceHourly from "./CardPriceHourly";
 

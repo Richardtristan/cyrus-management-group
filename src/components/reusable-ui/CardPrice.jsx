@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+
 import PrimaryButton from "./PrimaryButton";
 
 export default function CardPrice({className, price, title }) {
