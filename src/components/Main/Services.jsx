@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import { device } from "../../device";
+
 import Service from "../reusable-ui/Service";
 
 export default function Services() {
@@ -86,7 +88,7 @@ const ServicesStyled = styled.div`
   }
 
   .separator {
-    width: 25px;
+    width: 15px;
     height: 100%;
     border-radius: 10px;
     background: #1ca6b5;
@@ -105,5 +107,15 @@ const ServicesStyled = styled.div`
     text-align: right;
     animation: fadeInLeft;
     animation-duration: 2s;
+  }
+
+  @media ${device.tablet} {
+    h2 {
+      font-size: 40px;
+      margin: 30px 0;
+    }
+    .separator {
+      width: 25px;
+    }
   }
 `;

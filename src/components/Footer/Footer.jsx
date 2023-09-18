@@ -4,6 +4,7 @@ import { BsTwitter, BsSkype } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import FooterLinks from "./FooterLinks";
+import { device } from "../../device";
 
 export default function Footer() {
   return (
@@ -40,6 +41,7 @@ const FotterStyled = styled.footer`
   background-color: #1babbf;
   div {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     .centriste {
@@ -102,9 +104,9 @@ const FotterStyled = styled.footer`
       }
     }
     .networks {
-      padding: 40px;
+      padding: 40px 80px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
 
       .icon {
         color: white;
@@ -130,5 +132,15 @@ const FotterStyled = styled.footer`
     font-family: "Hind";
     font-size: 12px;
     font-weight: 300;
+  }
+
+  @media ${device.tablet} {
+    div {
+      flex-direction: row;
+      .networks {
+        padding: 40px 40px;
+        flex-direction: column;
+      }
+    }
   }
 `;

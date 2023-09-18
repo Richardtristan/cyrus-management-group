@@ -1,5 +1,6 @@
 import { HashLink as Link } from 'react-router-hash-link';
 import { styled } from "styled-components";
+import { device } from '../../device';
 
 export default function FooterLinks({ className }) {
   return (
@@ -19,7 +20,8 @@ export default function FooterLinks({ className }) {
 
 const LinksStyled = styled.nav`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 40px;
 
   .link {
@@ -53,5 +55,10 @@ const LinksStyled = styled.nav`
     &:hover {
       color: #FFF;
     }
+  }
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 `;

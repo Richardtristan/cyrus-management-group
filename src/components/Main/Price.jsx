@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 import CardPrice from "../reusable-ui/CardPrice";
 import CardPriceHourly from "./CardPriceHourly";
+import { device } from "../../device";
 
 export default function Price() {
   return (
@@ -17,7 +18,7 @@ export default function Price() {
 }
 
 const PriceStyled = styled.div`
-margin-top: 120px;
+  margin-top: 120px;
   h2 {
     text-align: center;
     text-transform: uppercase;
@@ -32,7 +33,15 @@ margin-top: 120px;
   }
   .cards {
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+  }
+
+  @media ${device.tablet} {
+    .cards {
+      flex-direction: row;
+    }
   }
 `;

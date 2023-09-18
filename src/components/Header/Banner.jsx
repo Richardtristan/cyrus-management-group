@@ -1,7 +1,9 @@
 import { styled } from "styled-components";
+import { device } from "../../device";
+import "animate.css";
+
 import PrimaryButton from "../reusable-ui/PrimaryButton";
 import SecondaryButton from "../reusable-ui/SecondaryButton";
-import 'animate.css';
 
 export default function Banner() {
   return (
@@ -34,22 +36,38 @@ const BannerStyled = styled.div`
     text-transform: uppercase;
   }
   h1 {
-    font-size: 60px;
+    font-size: 42px;
+    margin-bottom: 10px;
   }
   h3 {
-    font-size: 20px;
-    margin-bottom: 78px;
+    font-size: 18px;
+    margin-bottom: 30px;
   }
   button {
-    margin: 50px;
+    margin: 15px;
   }
 
   .fadeInDown {
-    animation: fadeInDown; 
-  animation-duration: 3s; 
+    animation: fadeInDown;
+    animation-duration: 3s;
   }
   .fadeInUp {
-    animation: fadeInUp; 
-  animation-duration: 3s; 
+    animation: fadeInUp;
+    animation-duration: 3s;
+  }
+
+  @media ${device.mobileS} {
+    button {
+      margin: 10px;
+    }
+  }
+  @media ${device.tablet} {
+    h3 {
+      font-size: 20px;
+      margin-bottom: 78px;
+    }
+    button {
+      margin: 50px;
+    }
   }
 `;

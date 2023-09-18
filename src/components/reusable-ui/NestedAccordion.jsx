@@ -5,6 +5,7 @@ import {
   AccordionHeader,
   AccordionItem,
 } from "react-headless-accordion";
+import { device } from "../../device";
 
 export default function NestedAccordion({ title, text }) {
   return (
@@ -29,7 +30,7 @@ margin: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 830px;
+    width: 90vw;
     height: 75px;
     flex-shrink: 0;
     border-radius: 10px;

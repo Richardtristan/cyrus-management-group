@@ -37,6 +37,7 @@ const CardPriceStyled = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0 25px;
   .card-price {
     width: 100px;
     height: 100px;

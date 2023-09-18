@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import NestedAccordion from "../reusable-ui/NestedAccordion";
+import { device } from "../../device";
 
 export default function Faq() {
   return (
