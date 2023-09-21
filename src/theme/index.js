@@ -1,7 +1,7 @@
 const colors = {
-  dark: "#17161a",
-  white: "white",
-  Blue: "#1bbabf",
+  Dark: "#17161a",
+  White: "white",
+  Cyan: "#1bbabf",
 };
 
 const spacing = {
@@ -34,6 +34,7 @@ const fonts = {
     semiBold: 600,
     bold: 700,
     heavy: 800,
+    bigHeavy: 800,
   },
 };
 const borderRadius = {
