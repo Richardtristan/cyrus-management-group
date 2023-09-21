@@ -5,6 +5,7 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import FooterLinks from "./FooterLinks";
 import { device } from "../../device";
+import { theme } from "../../theme";
 
 export default function Footer() {
   return (
@@ -38,7 +39,7 @@ export default function Footer() {
 }
 
 const FotterStyled = styled.footer`
-  background-color: #1babbf;
+  background-color: ${theme.colors.Cyan};
   div {
     display: flex;
     flex-direction: column;
@@ -63,7 +64,7 @@ const FotterStyled = styled.footer`
         align-items: center;
 
         a {
-          color: white;
+          color: ${theme.colors.White};
           text-decoration: none;
           display: inline-block;
           font-weight: lighter;
@@ -76,7 +77,7 @@ const FotterStyled = styled.footer`
           &:after {
             position: absolute;
             content: "";
-            border-bottom: 3px solid white;
+            border-bottom: 3px solid ${theme.colors.White};
             border-radius: 1em;
             bottom: 0.3em;
             transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -109,7 +110,7 @@ const FotterStyled = styled.footer`
       flex-direction: row;
 
       .icon {
-        color: white;
+        color: ${theme.colors.White};
         padding: 5px;
         margin: 3px;
         width: 25px;
@@ -117,8 +118,8 @@ const FotterStyled = styled.footer`
 
         &:hover {
           cursor: pointer;
-          background-color: white;
-          color: #1babbf;
+          background-color: ${theme.colors.White};
+          color: ${theme.colors.Cyan};
           border-radius: 50%;
           transform: translateY(-3px);
           transition: 0.3s ease-in-out;
@@ -128,10 +129,10 @@ const FotterStyled = styled.footer`
   }
   .copyright {
     text-align: right;
-    color: #fff;
+    color: ${theme.colors.White};
     font-family: "Hind";
-    font-size: 12px;
-    font-weight: 300;
+    font-size: ${theme.fonts.size.XS};
+    font-weight: ${theme.fonts.weights};
   }
 
   @media ${device.tablet} {

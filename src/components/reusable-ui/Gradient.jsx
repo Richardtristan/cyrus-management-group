@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { theme } from "../../theme";
 
 export default function Gradient({ className }) {
   return <GradientStyled className={className}></GradientStyled>;
@@ -10,7 +11,7 @@ const GradientStyled = styled.div`
   flex-shrink: 0;
   background: linear-gradient(
     180deg,
-    #1bbabf 8.28%,
+    ${theme.colors.Cyan} 8.28%,
     rgba(255, 255, 255, 0) 50%
   );
   position: absolute;

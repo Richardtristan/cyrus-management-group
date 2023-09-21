@@ -1,8 +1,9 @@
 import { styled } from "styled-components";
 
 import PrimaryButton from "./PrimaryButton";
+import { theme } from "../../theme";
 
-export default function CardPrice({className, price, title }) {
+export default function CardPrice({ className, price, title }) {
   return (
     <CardPriceStyled className={className}>
       <div className="card-price">
@@ -44,8 +45,8 @@ const CardPriceStyled = styled.div`
     transform: rotate(45deg) translateY(35px) translateX(35px);
     flex-shrink: 0;
     border-radius: 10px;
-    border: 3px solid #1ca6b5;
-    background: #fff;
+    border: 3px solid ${theme.colors.Cyan};
+    background: ${theme.colors.White};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,9 +54,9 @@ const CardPriceStyled = styled.div`
 
     p {
       transform: rotate(-45deg);
-      color: #1ca6b5;
+      color: ${theme.colors.Cyan};
       font-family: "Hind";
-      font-size: 8px;
+      font-size: ${theme.fonts.size.XXXS};
       font-weight: 100;
 
       &:nth-child(1) {
@@ -64,8 +65,8 @@ const CardPriceStyled = styled.div`
       }
       &:nth-child(2) {
         font-family: "Montserrat", sans-serif;
-        font-size: 24px;
-        font-weight: 700;
+        font-size: ${theme.fonts.size.P3};
+        font-weight: ${theme.fonts.weights.bold};
       }
       &:nth-child(3) {
         padding-left: 50px;
@@ -74,17 +75,17 @@ const CardPriceStyled = styled.div`
     }
   }
   .card-content {
-    background-color: #1bbabf;
-    border-radius: 10px;
+    background-color: ${theme.colors.Cyan};
+    border-radius: ${theme.borderRadius.round};
     padding: 0 10px;
     padding-top: 100px;
     padding-bottom: 60px;
-    color: white;
+    color: ${theme.colors.White};
     h4 {
-      color: #fff;
+      color: ${theme.colors.White};
       font-family: "Montserrat", sans-serif;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: ${theme.fonts.size.P3};
+      font-weight: ${theme.fonts.weights.bold};
       text-align: center;
       text-transform: uppercase;
     }
@@ -94,13 +95,10 @@ const CardPriceStyled = styled.div`
       li {
         list-style: none;
         text-align: center;
-        color: #fff;
+        color: ${theme.colors.White};
         text-align: center;
         font-family: "Hind";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        font-size: ${theme.fonts.size.P1};
         &:nth-child(4),
         &:nth-child(5) {
           text-decoration: line-through;
@@ -109,13 +107,11 @@ const CardPriceStyled = styled.div`
       }
     }
     p {
-      color: #fff;
+      color: ${theme.colors.White};
       text-align: justify;
       font-family: "Hind";
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
+      font-size: ${theme.fonts.size.XS};
+      font-weight: ${theme.fonts.weights.light};
     }
   }
   .card-button {

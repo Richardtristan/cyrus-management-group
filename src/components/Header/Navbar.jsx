@@ -7,6 +7,7 @@ import { useState } from "react";
 import Logo from "../../assets/images/CMG-Horizontal-Logo-RGB-Full-Color.png";
 import NavbarLinks from "./NavbarLinks";
 import PrimaryButton from "../reusable-ui/PrimaryButton";
+import { theme } from "../../theme";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +65,7 @@ const NavbarStyled = styled.div`
   }
 
   .icon {
-    color: #1bbabf;
+    color: ${theme.colors.Cyan};
     margin-right: 20px;
     transform: scale(1.5);
 
@@ -79,7 +80,7 @@ const NavbarStyled = styled.div`
 
   .link-mobile {
     z-index: 10;
-    background-color: white;
+    background-color: ${theme.colors.White};
     position: fixed;
     top: 0;
     left: 0;

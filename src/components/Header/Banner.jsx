@@ -4,6 +4,7 @@ import "animate.css";
 
 import PrimaryButton from "../reusable-ui/PrimaryButton";
 import SecondaryButton from "../reusable-ui/SecondaryButton";
+import { theme } from "../../theme";
 
 export default function Banner() {
   return (
@@ -20,7 +21,7 @@ export default function Banner() {
 }
 
 const BannerStyled = styled.div`
-  background-color: #1bbabf;
+  background-color: ${theme.colors.Cyan};
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -30,17 +31,17 @@ const BannerStyled = styled.div`
 
   h1,
   h3 {
-    color: white;
+    color: ${theme.colors.White};
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    font-weight: ${theme.fonts.weights.bold};
     text-transform: uppercase;
   }
   h1 {
-    font-size: 42px;
+    font-size: ${theme.fonts.size.P5};
     margin-bottom: 10px;
   }
   h3 {
-    font-size: 18px;
+    font-size: ${theme.fonts.size.P1};
     margin-bottom: 30px;
   }
   button {
@@ -63,7 +64,7 @@ const BannerStyled = styled.div`
   }
   @media ${device.tablet} {
     h3 {
-      font-size: 20px;
+      font-size: ${theme.fonts.size.P2};
       margin-bottom: 78px;
     }
     button {

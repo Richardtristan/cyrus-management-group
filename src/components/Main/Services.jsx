@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { device } from "../../device";
 
 import Service from "../reusable-ui/Service";
+import { theme } from "../../theme";
 
 export default function Services() {
   return (
@@ -77,13 +78,14 @@ export default function Services() {
 
 const ServicesStyled = styled.div`
   position: relative;
+
   h2 {
     text-align: center;
     text-transform: uppercase;
-    color: #000;
+    color: ${theme.colors.Dark};
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: 900;
+    font-size: ${theme.fonts.size.P2};
+    font-weight: ${theme.fonts.weights.bigHeavy};
     margin: 30px 0;
   }
 
@@ -91,7 +93,7 @@ const ServicesStyled = styled.div`
     width: 15px;
     height: 100%;
     border-radius: 10px;
-    background: #1ca6b5;
+    background: ${theme.colors.Cyan};
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -111,7 +113,7 @@ const ServicesStyled = styled.div`
 
   @media ${device.tablet} {
     h2 {
-      font-size: 40px;
+      font-size: ${theme.fonts.size.P4};
       margin: 30px 0;
     }
     .separator {

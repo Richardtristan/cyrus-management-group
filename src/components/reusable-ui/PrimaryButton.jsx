@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { theme } from "../../theme";
 
 export default function PrimaryButton({ className, label }) {
   return (
@@ -11,17 +12,17 @@ export default function PrimaryButton({ className, label }) {
 const PrimaryButtonStyled = styled.button`
   width: 140px;
   height: 50px;
-  color: #1bbabf;
+  color: ${theme.colors.Cyan};
   background-color: white;
-  border: 2px solid #1bbabf;
+  border: 2px solid ${theme.colors.Cyan};
   border-radius: 40px;
   font-family: "Hind", sans-serif;
 
   &:hover {
     cursor: pointer;
-    color: white;
-    background-color: #1bbabf;
-    border: 2px solid white;
+    color: ${theme.colors.White};
+    background-color: ${theme.colors.Cyan};
+    border: 2px solid ${theme.colors.White};
     transition: all 0.5s ease-in-out;
   }
 `;

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import PrimaryButton from "../reusable-ui/PrimaryButton";
 import { device } from "../../device";
+import { theme } from "../../theme";
 
 export default function CardPriceHourly() {
   return (
@@ -31,9 +32,9 @@ const CardPriceHourlyStyled = styled.div`
     height: 100px;
     transform: rotate(45deg) translateY(35px) translateX(35px);
     flex-shrink: 0;
-    border-radius: 10px;
-    border: 3px solid #1ca6b5;
-    background: #fff;
+    border-radius: ${theme.borderRadius.round};
+    border: 3px solid ${theme.colors.Cyan};
+    background: ${theme.colors.White};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,9 +42,9 @@ const CardPriceHourlyStyled = styled.div`
 
     p {
       transform: rotate(-45deg);
-      color: #1ca6b5;
+      color: ${theme.colors.Cyan};
       font-family: "Hind";
-      font-size: 8px;
+      font-size: ${theme.fonts.size.XXXS};
       font-weight: 100;
 
       &:nth-child(1) {
@@ -53,7 +54,7 @@ const CardPriceHourlyStyled = styled.div`
       &:nth-child(2) {
         font-family: "Montserrat", sans-serif;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: ${theme.fonts.weights.bold};
       }
       &:nth-child(3) {
         padding-left: 50px;
@@ -63,32 +64,31 @@ const CardPriceHourlyStyled = styled.div`
   }
   .card-content {
     width: 100%;
-    background-color: #1bbabf;
-    border-radius: 10px;
+    background-color: ${theme.colors.Cyan};
+    border-radius: ${theme.borderRadius.round};
     padding: 0 10px;
     padding-top: 80px;
     padding-bottom: 60px;
-    color: white;
+    color: ${theme.colors.White};
     h4 {
-      color: #fff;
+      color: ${theme.colors.White};
       font-family: "Montserrat", sans-serif;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: ${theme.fonts.size.P3};
+      font-weight: ${theme.fonts.weights.bold};
       text-align: center;
       margin-bottom: 5px;
     }
     p {
-      color: #fff;
+      color: ${theme.colors.White};
       text-align: center;
       font-family: "Hind";
-      font-size: 12px;
-      font-weight: 300;
+      font-size: ${theme.fonts.size.XS};
+      font-weight: ${theme.fonts.weights.light};
     }
   }
   .card-button {
     transform: translateY(-25px);
   }
-
 
   @media ${device.tablet} {
     width: 550px;

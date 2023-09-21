@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import CardPrice from "../reusable-ui/CardPrice";
 import CardPriceHourly from "./CardPriceHourly";
 import { device } from "../../device";
+import { theme } from "../../theme";
 
 export default function Price() {
   return (
@@ -22,13 +23,11 @@ const PriceStyled = styled.div`
   h2 {
     text-align: center;
     text-transform: uppercase;
-    color: #000;
+    color: ${theme.colors.Dark};
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
+    font-size: ${theme.fonts.size.P2};
+    font-weight: ${theme.fonts.weights.bigHeavy};
     margin: 30px 0;
   }
   .cards {

@@ -1,6 +1,7 @@
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 import { styled } from "styled-components";
-import { device } from '../../device';
+import { device } from "../../device";
+import { theme } from "../../theme";
 
 export default function FooterLinks({ className }) {
   return (
@@ -25,13 +26,13 @@ const LinksStyled = styled.nav`
   padding: 40px;
 
   .link {
-    color: #FFF;
+    color: ${theme.colors.White};
     position: relative;
     text-decoration: none;
     margin: 5px 15px;
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: ${theme.fonts.size.P0};
+    font-weight: ${theme.fonts.weights.regular};
     text-transform: uppercase;
     width: auto;
 
@@ -41,7 +42,7 @@ const LinksStyled = styled.nav`
       width: 100%;
       height: 2px;
       border-radius: 4px;
-      background-color: #FFF;
+      background-color: ${theme.colors.White};
       bottom: 0;
       left: 0;
       transform-origin: right;
@@ -53,7 +54,7 @@ const LinksStyled = styled.nav`
       transform: scaleX(1);
     }
     &:hover {
-      color: #FFF;
+      color: ${theme.colors.White};
     }
   }
 

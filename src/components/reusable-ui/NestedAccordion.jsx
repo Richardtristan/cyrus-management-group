@@ -5,7 +5,7 @@ import {
   AccordionHeader,
   AccordionItem,
 } from "react-headless-accordion";
-import { device } from "../../device";
+import { theme } from "../../theme";
 
 export default function NestedAccordion({ title, text }) {
   return (
@@ -25,7 +25,7 @@ export default function NestedAccordion({ title, text }) {
 }
 
 const NestedAccordionStyled = styled.div`
-margin: 15px;
+  margin: 15px;
   .accordion-header {
     display: flex;
     justify-content: space-between;
@@ -33,17 +33,17 @@ margin: 15px;
     width: 90vw;
     height: 75px;
     flex-shrink: 0;
-    border-radius: 10px;
-    background: #fff;
+    border-radius: ${theme.borderRadius.round};
+    background: ${theme.colors.White};
     border: 1px solid transparent;
 
     .accordion-title {
       padding-left: 25px;
-      color: #000;
+      color: ${theme.colors.Dark};
       text-align: justify;
       font-family: "Hind";
-      font-size: 12px;
-      font-weight: 400;
+      font-size: ${theme.fonts.size.XS};
+      font-weight: ${theme.fonts.weights.regular};
     }
 
     .icon {
@@ -53,28 +53,28 @@ margin: 15px;
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 4px 4px 0px ${theme.colors.Dark};
 
       .accordion-title {
-        color: #1bbabf;
+        color: ${theme.colors.Cyan};
       }
     }
   }
 
   .AccordionBody {
-    background-color: white;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    background-color: ${theme.colors.White};
+    box-shadow: 0px 4px 4px 0px ${theme.colors.Dark};
+    border-radius: ${theme.borderRadius.round};
     margin-top: 3px;
     display: flex;
     justify-self: flex-end;
 
     .accordion-body {
-      color: #000;
+      color: ${theme.colors.Dark};
       text-align: justify;
       font-family: "Hind";
-      font-size: 12px;
-      font-weight: 400;
+      font-size: ${theme.fonts.size.XS};
+      font-weight: ${theme.fonts.weights.regular};
       padding: 20px;
     }
   }

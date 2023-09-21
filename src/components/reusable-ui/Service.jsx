@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { useInView } from "react-intersection-observer";
+import { theme } from "../../theme";
 
 export default function Service({ Title, Text, className }) {
   const { ref, inView } = useInView();
@@ -21,17 +22,17 @@ const ServiceStyled = styled.div`
   position: relative;
   width: 35vw;
   h3 {
-    color: #000;
+    color: ${theme.colors.Dark};
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: ${theme.fonts.size.P2};
+    font-weight: ${theme.fonts.weights.bold};
   }
   P {
-    color: #000;
+    color: ${theme.colors.Dark};
     text-align: justify;
     font-family: "Hind";
-    font-size: 12px;
-    font-weight: 300;
+    font-size: ${theme.fonts.size.XS};
+    font-weight: ${theme.fonts.weights.light};
   }
   .notVisible {
     visibility: hidden;

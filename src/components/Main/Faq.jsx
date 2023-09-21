@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import NestedAccordion from "../reusable-ui/NestedAccordion";
 import { device } from "../../device";
+import { theme } from "../../theme";
 
 export default function Faq() {
   return (
@@ -15,13 +16,13 @@ export default function Faq() {
 
 const FaqStyled = styled.div`
   margin-bottom: 160px;
-  
+
   h2 {
-    color: #000;
+    color: ${theme.colors.Dark};
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: ${theme.fonts.size.P2};
+    font-weight: ${theme.fonts.weights.bold};
     margin-top: 120px;
     margin-bottom: 62px;
   }
