@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { device } from "../../device/";
 import { AiOutlineMenu } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
 
 import Logo from "../../assets/images/CMG-Horizontal-Logo-RGB-Full-Color.png";
@@ -27,6 +28,10 @@ export default function Navbar() {
       </div>
       <AiOutlineMenu onClick={toggleMenu} className="icon" />
       <div className={`link-mobile ${isOpen ? "is-open" : ""}`}>
+        <div className="logo-with-menu">
+          <img className="Logo" src={Logo} alt="" />
+          <RxCross2 onClick={toggleMenu} className="icon" />
+        </div>
         <nav>
           <NavbarLinks className={"navbar-menu"} onClick={hideMenu} />
         </nav>
@@ -46,7 +51,7 @@ const NavbarStyled = styled.div`
     height: 50px;
   }
 
-  div {
+  .link-desktop {
     display: none;
 
     @media ${device.tablet} {
@@ -73,14 +78,34 @@ const NavbarStyled = styled.div`
   }
 
   .link-mobile {
-    background-color: red;
+    z-index: 10;
+    background-color: white;
     position: fixed;
-    top: 10vh;
+    top: 0;
     left: 0;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
+    padding: 20px;
+
+    .logo-with-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .icon {
+        transform: scale(2);
+      }
+    }
+
     .navbar-menu {
       flex-direction: column;
+      text-align: center;
+      margin-top: 40px;
+
+      .link {
+        padding: 20px 0;
+        background-color: #f1f1f1;
+      }
     }
   }
 
