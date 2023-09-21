@@ -1,17 +1,16 @@
-
 import { styled } from "styled-components";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 
-export default function NavbarLinks({ className }) {
+export default function NavbarLinks({ className, onClick }) {
   return (
     <LinksStyled className={className}>
-      <Link className="link" to="/Main/Services#Services">
+      <Link className="link" to="/Main/Services#Services" onClick={onClick}>
         Services
       </Link>
-      <Link className="link" to="/Main/Price#Price">
+      <Link className="link" to="/Main/Price#Price" onClick={onClick}>
         Price
       </Link>
-      <Link className="link" to="/Main/Faq#Faq">
+      <Link className="link" to="/Main/Faq#Faq" onClick={onClick}>
         F.a.q
       </Link>
     </LinksStyled>
